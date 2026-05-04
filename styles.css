@@ -1,0 +1,267 @@
+body{
+margin:0;
+font-family:'Open Sans', sans-serif;
+background:#0f0f0f;
+color:#fff;
+}
+
+/* ================= HEADER ================= */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+z-index:1000;
+flex-wrap:wrap;
+box-sizing:border-box;
+}
+
+header nav{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+header a{
+color:#00c853;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
+
+header a:hover{
+color:#fff;
+}
+
+/* ================= HERO ================= */
+.hero{
+height:100vh;
+background:url('/img/enfermera.webp') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85));
+}
+
+.contenido{
+position:relative;
+z-index:2;
+max-width:800px;
+}
+
+h1{
+font-size:60px;
+}
+
+p{
+font-size:20px;
+}
+
+/* ================= SECCIONES ================= */
+.bloque{
+padding:120px 20px;
+text-align:center;
+}
+
+.blanco{
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/img/fondo1.webp') center/cover;
+}
+
+.gris{
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/img/hero.webp') center/cover;
+}
+
+/* ================= GRID ================= */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+max-width:1100px;
+margin:50px auto 0 auto;
+}
+
+/* ================= CARD ================= */
+.card{
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+overflow:hidden;
+backdrop-filter:blur(10px);
+transition:0.4s;
+text-align:left;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+display:block;
+}
+
+.card h3{
+padding:15px 20px 5px;
+font-size:20px;
+}
+
+.card p{
+padding:0 20px 20px;
+font-size:15px;
+color:#ccc;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* ================= BOTONES ================= */
+.btn{
+background:#00c853;
+padding:15px 30px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+.grande{
+font-size:18px;
+padding:18px 35px;
+}
+
+/* ================= CTA ================= */
+.cta{
+text-align:center;
+}
+
+.cta-box{
+margin-top:40px;
+}
+
+/* ================= FORM ================= */
+.form-box{
+margin-top:40px;
+}
+
+input, textarea{
+width:80%;
+max-width:400px;
+padding:12px;
+margin:10px;
+border-radius:5px;
+border:none;
+}
+
+/* ================= FOOTER ================= */
+footer{
+background:#111;
+color:#ccc;
+text-align:center;
+padding:50px;
+border-top:2px solid #00c853;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+}
+
+/* ================= ANIMACIONES ================= */
+.reveal{
+opacity:0;
+transform:translateY(80px);
+transition:0.8s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px){
+h1{ font-size:45px; }
+.grid{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+}
+
+@media (max-width: 768px){
+
+header{
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:8px;
+padding:10px 15px;
+}
+
+header nav{
+width:100%;
+justify-content:center;
+gap:10px;
+}
+
+h1{ font-size:34px; }
+p{ font-size:16px; }
+
+.bloque{ padding:80px 15px; }
+
+.grid{ grid-template-columns:1fr; }
+
+.card img{ height:160px; }
+
+.btn{
+padding:12px 20px;
+font-size:14px;
+}
+
+input, textarea{
+width:90%;
+}
+
+.whatsapp{
+padding:12px;
+bottom:15px;
+right:15px;
+}
+}
+
+@media (max-width: 480px){
+h1{ font-size:28px; }
+
+header h2{
+font-size:18px;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+}
+
+/* ================= SCROLL FIX ================= */
+html{
+scroll-behavior:smooth;
+}
+
+section{
+scroll-margin-top:90px;
+}
